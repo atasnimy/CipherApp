@@ -22,7 +22,7 @@ st.write("The Caesar cipher encrypts any message by moving each letter depending
 st.write("Encrypt your text using the Caesar cipher.")
 
 # Input for plain text
-text = st.text_input("Enter the text to be encrypted:")
+text = st.text_input("Enter the text to be encrypted/decrypted:")
 
 # Input for shift value
 shift = st.number_input("Enter the shift value (1-25):", min_value=1, max_value=25, value=5)
@@ -37,7 +37,7 @@ if st.button("Encrypt Now!"):
         st.warning("Please enter a text to encrypt.")
 
 # Button to decrypt
-if st.button("Decrypt"):
+if st.button("Decrypt Now!"):
     if text:
         decrypted_text = caesar_encrypt(text, -shift)  # Use negative shift for decryption
         st.write('**Input text:**', text)
